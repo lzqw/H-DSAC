@@ -20,30 +20,6 @@ HUMAN_IN_THE_LOOP_ENV_CONFIG = {
     "record_video":True,
     "video_folder":'./video',
     "horizon": 2000,
-    # "success_reward": 10.0,
-    # "out_of_road_penalty": 5.0,
-    # "crash_vehicle_penalty": 10.0,
-    # "crash_object_penalty" :10.0,
-    """
-    "driving_reward": 5.0,
-    "speed_reward": 1.0,
-    "use_lateral_reward":True,
-    "success_reward" : 50.0,
-    "out_of_road_penalty" : 30.0,
-    # "on_lane_line_penalty" : 5.,
-    "crash_vehicle_penalty" : 30.0,
-    "crash_object_penalty" : 30.0,
-    
-    """
-    # "driving_reward": 5.0,
-    # "speed_reward": 1.0,
-    # "use_lateral_reward":True,
-    # "success_reward" : 20.0,
-    # "out_of_road_penalty" : 10.0,
-    # # "on_lane_line_penalty" : 5.,
-    # "crash_vehicle_penalty" : 10.0,
-    # "crash_object_penalty" : 10.0,
-
 
     "use_render": True,
     # Environment setting:

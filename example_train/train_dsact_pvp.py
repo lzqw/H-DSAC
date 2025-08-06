@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # Key Parameters for users
     parser.add_argument("--env_id", type=str, default="gym_metadrivepvp", help="id of environment")
     #gym_pendulum can be replaced by other envs in the env_gym folder, such as gym_ant, gym_walker2d... but more complex envs need bigger "max iteration" setting. U can refer to "dsac_mlp_humanoid_offserial.py" to set up.
-    parser.add_argument("--algorithm", type=str, default="DSAC_V2_PVP", help="DSAC_V2 or DSAC_V1 or DSAC_V2_EGPO")
+    parser.add_argument("--algorithm", type=str, default="DSAC_V2_PVP")
     #set algorithm default to DSAC_V2, but it can be replaced by DSAC_V1 if you want to use the old version of DSAC.
 
     parser.add_argument("--enable_cuda", default=True, help="Enable CUDA")
@@ -107,8 +107,7 @@ if __name__ == "__main__":
 
     # 4.1. Parameters for off_serial_trainer
     parser.add_argument(
-        "--buffer_name", type=str, default="pvp_buffer", help="Options:replay_buffer/prioritized_replay_buffer/egpo_buffer"
-    )
+        "--buffer_name", type=str, default="pvp_buffer")
     parser.add_argument("--max_iteration", type=int, default=5e6)
     # Size of collected samples before training
     parser.add_argument("--buffer_warm_size", type=int, default=500)
@@ -122,8 +121,7 @@ if __name__ == "__main__":
     ################################################
     # 5. Parameters for sampler
     parser.add_argument(
-        "--sampler_name", type=str, default="pvp_sampler", help="Options:Off_sampler/Egpo_Sampler"
-    )
+        "--sampler_name", type=str, default="pvp_sampler")
     # Batch size of sampler for buffer store
     parser.add_argument("--sample_batch_size", type=int, default=10)
     # Add noise to action for better exploration
@@ -132,7 +130,7 @@ if __name__ == "__main__":
     ################################################
     # 6. Parameters for evaluator
     parser.add_argument("--use_eval", type=bool, default=False)
-    parser.add_argument("--evaluator_name", type=str, default="Egpo_evaluator")
+    parser.add_argument("--evaluator_name", type=str, default="Pvp_evaluator")
     parser.add_argument("--num_eval_episode", type=int, default=2)
     parser.add_argument("--eval_interval", type=int, default=1000)
     parser.add_argument("--eval_save", type=str, default=False, help="save evaluation data")
